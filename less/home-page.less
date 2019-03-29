@@ -1,119 +1,134 @@
 body {
-  max-width: 1000px;
-  width: 100%;
+    max-width: 1000px;
+    width: 100%;
 }
 
 .home {
 
-  max-width: 800px;
-  width: 100%;
-
-  .title-section-written {
-    margin: 20px 0;
-    border-bottom: 2px dashed lightgray;
-
-    @media @tablet {
-      padding: 0 20px;
-    }
-  }
-  .content-section {
+    max-width: 800px;
     width: 100%;
-    margin: 30px 0;
+
+    .title-section-written {
+        margin: 20px 0;
+        border-bottom: 2px dashed lightgray;
+
+        @media @tablet {
+            padding: 0 20px;
+        }
+    }
+
+    .content-section {
+        width: 100%;
+        margin: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media @mobile {
+            flex-direction: column;
+            align-content: center;
+            padding-bottom: 20px;
+        }
+
+        .text-content {
+            width: 48%;
+            padding-right: 1%;
+
+            @media @mobile {
+                width: 100%;
+                margin: 0;
+                padding: 0 20px;
+            }
+        }
+
+        .img-content {
+            width: 48%;
+            padding-left: 1%;
+
+            @media @mobile {
+                width: 100%;
+                margin: 0;
+                padding: 0px 25px;
+            }
+
+            img {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.inverse-content {
+    width: 100%;
+    padding: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    @media @mobile {
-      flex-direction: column;
-      align-content: center;
-      padding-bottom: 20px;
-    }
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-
-      @media @mobile {
-        width: 100%;
-        margin: 0;
-        padding: 0 20px;
-      }
-    }
-
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      @media @mobile {
-        width: 100%;
-        margin: 0;
-        padding: 0px 25px;
-      }
-
-      img {
-        border-radius: 10px;
-        }
-      }
-    }
-  }
-
-  .inverse-content {
-    padding-bottom: 30px;
+    align-items: center;
     border-bottom: 2px dashed @navigation-border;
 
     @media @mobile {
-      display: flex;
       flex-direction: column-reverse;
-      width: 100%;
-      margin: 0;
-      padding: 0 20px;
+      align-content: center;
+      padding-bottom: 20px;
     }
 
     .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+        padding-left: 1%;
+        padding-right: 0;
     }
 
     .img-content {
-      padding-right: 1%;
-      padding-left: 0;
+        padding-right: 1%;
+        padding-left: 0;
     }
-  }
+}
 
-  .content-destination {
+.content-destination {
     width: 75%;
     margin: 0 auto 30px;
 
-    img {
-      border-radius: 10px;
+    @media @mobile {
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px;
     }
-  }
 
-  .content-pick {
+    img {
+        border-radius: 10px;
+    }
+}
+
+.content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
 
-      @media @mobile {
-          width: 100%;
-          margin: 0;
-          padding: 0 20px;
-        }
-      }
+    @media @mobile {
+        flex-direction: column;
+        align-content: center;
+        padding-bottom: 20px;
+    }
+}
 
+.destination {
+    width: 30%;
+    margin-bottom: 30px;
+
+    @media @mobile {
+        width: 100%;
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-
-      .btn {
+    .btn {
         .custom-btn(@width: 200px, @bgColor: #17A2B8, @fontColor: white);
-      }
     }
-  }
-}// home
+} // home
 
 .header-section {
   display: flex;
@@ -122,7 +137,7 @@ body {
   border-bottom: 2px dashed lightgrey;
   padding: 25px 100px;
 
-  @media @mobile{
+  @media @mobile {
       flex-direction: column;
       align-items: center;
       padding: 10px 0;
